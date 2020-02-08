@@ -35,6 +35,9 @@
 		AE90C18723EE3A4300956805 /* QuizViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE90C18523EE3A4300956805 /* QuizViewController.xib */; };
 		AE90C18A23EE41A900956805 /* QuizViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE90C18923EE41A900956805 /* QuizViewModel.swift */; };
 		AE90C18D23EE446400956805 /* QuizCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE90C18C23EE446400956805 /* QuizCoordinator.swift */; };
+		AEC5EF9923EF2612001E1106 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC5EF9823EF2612001E1106 /* Observable.swift */; };
+		AEC5EF9B23EF2A0D001E1106 /* RequestState.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC5EF9A23EF2A0D001E1106 /* RequestState.swift */; };
+		AEC5EF9D23EF4DE1001E1106 /* UIViewControler+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC5EF9C23EF4DE1001E1106 /* UIViewControler+Utils.swift */; };
 		AED5A2A523EF164A0053178B /* StatusValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED5A2A423EF164A0053178B /* StatusValidator.swift */; };
 /* End PBXBuildFile section */
 
@@ -81,6 +84,9 @@
 		AE90C18523EE3A4300956805 /* QuizViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuizViewController.xib; sourceTree = "<group>"; };
 		AE90C18923EE41A900956805 /* QuizViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewModel.swift; sourceTree = "<group>"; };
 		AE90C18C23EE446400956805 /* QuizCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizCoordinator.swift; sourceTree = "<group>"; };
+		AEC5EF9823EF2612001E1106 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		AEC5EF9A23EF2A0D001E1106 /* RequestState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestState.swift; sourceTree = "<group>"; };
+		AEC5EF9C23EF4DE1001E1106 /* UIViewControler+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewControler+Utils.swift"; sourceTree = "<group>"; };
 		AED5A2A423EF164A0053178B /* StatusValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusValidator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -116,6 +122,7 @@
 			children = (
 				AE1AB97723EE6CC4009DA6AE /* UIView+Utils.swift */,
 				AE1AB97923EE6D3E009DA6AE /* UITableView+Utils.swift */,
+				AEC5EF9C23EF4DE1001E1106 /* UIViewControler+Utils.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -156,6 +163,8 @@
 			isa = PBXGroup;
 			children = (
 				AE1AB99323EEFBF3009DA6AE /* CodableHandler.swift */,
+				AEC5EF9823EF2612001E1106 /* Observable.swift */,
+				AEC5EF9A23EF2A0D001E1106 /* RequestState.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -414,9 +423,11 @@
 				AE90C17F23EE376100956805 /* AppCoordinator.swift in Sources */,
 				AE90C18623EE3A4300956805 /* QuizViewController.swift in Sources */,
 				AE90C18D23EE446400956805 /* QuizCoordinator.swift in Sources */,
+				AEC5EF9923EF2612001E1106 /* Observable.swift in Sources */,
 				AE90C15823EE317D00956805 /* AppDelegate.swift in Sources */,
 				AE1AB99A23EF04B4009DA6AE /* QuizAPI.swift in Sources */,
 				AE1AB97823EE6CC4009DA6AE /* UIView+Utils.swift in Sources */,
+				AEC5EF9B23EF2A0D001E1106 /* RequestState.swift in Sources */,
 				AE90C15A23EE317D00956805 /* SceneDelegate.swift in Sources */,
 				AE1AB98223EE83DC009DA6AE /* URL+Router.swift in Sources */,
 				AE1AB98723EE88D2009DA6AE /* Provider.swift in Sources */,
@@ -427,6 +438,7 @@
 				AE1AB98D23EE8F81009DA6AE /* RequesterExecutor.swift in Sources */,
 				AE1AB98B23EE8F04009DA6AE /* Requester.swift in Sources */,
 				AE1AB97A23EE6D3E009DA6AE /* UITableView+Utils.swift in Sources */,
+				AEC5EF9D23EF4DE1001E1106 /* UIViewControler+Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,6 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="QuizViewController" customModule="QuizMobile" customModuleProvider="target">
             <connections>
+                <outlet property="bottonViewBottonConstraint" destination="jIm-j9-R1Z" id="oyy-DT-148"/>
                 <outlet property="pointsLabel" destination="aNQ-nb-vAx" id="DYh-zw-owk"/>
                 <outlet property="tableView" destination="V5s-rc-ZeF" id="caC-l1-0RA"/>
                 <outlet property="timeLabel" destination="Xmr-He-k7X" id="WuJ-wu-9td"/>
@@ -35,7 +36,7 @@
                         <constraint firstAttribute="height" constant="50" id="V7C-7Q-d9M"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                    <textInputTraits key="textInputTraits"/>
+                    <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                 </textField>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uHk-3u-8Nj">
                     <rect key="frame" x="0.0" y="527" width="375" height="140"/>
