@@ -10,6 +10,6 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Run tests
-      run: xcodebuild -project 'QuizMobile.xcodeproj' -scheme 'QuizMobile' -destination 'platform=iOS Simulator,name=iPhone 8' test
+      run: xcodebuild -project 'QuizMobile/QuizMobile.xcodeproj' -scheme 'QuizMobile' -destination 'platform=iOS Simulator,name=iPhone 8' test
     - name: Build App
-      run: xcodebuild -project 'QuizMobile.xcodeproj' -scheme 'QuizMobile' -destination 'generic/platform=iOS' -configuration Release build CODE_SIGNING_ALLOWED=NO
+      run: xcodebuild -project 'QuizMobile/QuizMobile.xcodeproj' -scheme 'QuizMobile' -destination 'generic/platform=iOS' -configuration Release build CODE_SIGNING_ALLOWED=NO
