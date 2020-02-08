@@ -17,7 +17,7 @@ class QuizCoordinator: Coordinator {
     var navigation: UINavigationController?
     
     func start() -> QuizViewController {
-        let viewModel = QuizViewModel()
+        let viewModel = QuizViewModel(service: QuizService())
         let viewController = QuizViewController(viewModel: viewModel)
         self.view = viewController
         return viewController

@@ -30,15 +30,12 @@ class QuizViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpTableView()
+        viewModel?.fetchQustion()
     }
     
     func setUpTableView() {
         tableView.register(QuizViewCell.self)
     }
-}
-
-extension QuizViewController: UITableViewDelegate {
-    
 }
 
 extension QuizViewController: UITableViewDataSource {
