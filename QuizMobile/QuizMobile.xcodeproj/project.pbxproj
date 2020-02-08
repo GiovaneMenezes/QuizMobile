@@ -11,6 +11,19 @@
 		AE1AB97523EE6AE3009DA6AE /* QuizViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE1AB97323EE6AE3009DA6AE /* QuizViewCell.xib */; };
 		AE1AB97823EE6CC4009DA6AE /* UIView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1AB97723EE6CC4009DA6AE /* UIView+Utils.swift */; };
 		AE1AB97A23EE6D3E009DA6AE /* UITableView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1AB97923EE6D3E009DA6AE /* UITableView+Utils.swift */; };
+		AE1AB97D23EE7E02009DA6AE /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1AB97C23EE7E02009DA6AE /* Router.swift */; };
+		AE1AB97F23EE81EC009DA6AE /* RequestComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1AB97E23EE81EC009DA6AE /* RequestComposer.swift */; };
+		AE1AB98223EE83DC009DA6AE /* URL+Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1AB98123EE83DC009DA6AE /* URL+Router.swift */; };
+		AE1AB98523EE872F009DA6AE /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1AB98423EE872F009DA6AE /* Environment.swift */; };
+		AE1AB98723EE88D2009DA6AE /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1AB98623EE88D2009DA6AE /* Provider.swift */; };
+		AE1AB98923EE8C48009DA6AE /* RequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1AB98823EE8C48009DA6AE /* RequestError.swift */; };
+		AE1AB98B23EE8F04009DA6AE /* Requester.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1AB98A23EE8F04009DA6AE /* Requester.swift */; };
+		AE1AB98D23EE8F81009DA6AE /* RequesterExecutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1AB98C23EE8F81009DA6AE /* RequesterExecutor.swift */; };
+		AE1AB98F23EE987F009DA6AE /* NetworkingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1AB98E23EE987F009DA6AE /* NetworkingService.swift */; };
+		AE1AB99423EEFBF3009DA6AE /* CodableHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1AB99323EEFBF3009DA6AE /* CodableHandler.swift */; };
+		AE1AB99823EF0463009DA6AE /* QuizService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1AB99723EF0463009DA6AE /* QuizService.swift */; };
+		AE1AB99A23EF04B4009DA6AE /* QuizAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1AB99923EF04B4009DA6AE /* QuizAPI.swift */; };
+		AE1AB99D23EF0752009DA6AE /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1AB99C23EF0752009DA6AE /* Question.swift */; };
 		AE90C15823EE317D00956805 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE90C15723EE317D00956805 /* AppDelegate.swift */; };
 		AE90C15A23EE317D00956805 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE90C15923EE317D00956805 /* SceneDelegate.swift */; };
 		AE90C16123EE318100956805 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE90C16023EE318100956805 /* Assets.xcassets */; };
@@ -22,6 +35,7 @@
 		AE90C18723EE3A4300956805 /* QuizViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE90C18523EE3A4300956805 /* QuizViewController.xib */; };
 		AE90C18A23EE41A900956805 /* QuizViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE90C18923EE41A900956805 /* QuizViewModel.swift */; };
 		AE90C18D23EE446400956805 /* QuizCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE90C18C23EE446400956805 /* QuizCoordinator.swift */; };
+		AED5A2A523EF164A0053178B /* StatusValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED5A2A423EF164A0053178B /* StatusValidator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +53,19 @@
 		AE1AB97323EE6AE3009DA6AE /* QuizViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuizViewCell.xib; sourceTree = "<group>"; };
 		AE1AB97723EE6CC4009DA6AE /* UIView+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Utils.swift"; sourceTree = "<group>"; };
 		AE1AB97923EE6D3E009DA6AE /* UITableView+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Utils.swift"; sourceTree = "<group>"; };
+		AE1AB97C23EE7E02009DA6AE /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		AE1AB97E23EE81EC009DA6AE /* RequestComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestComposer.swift; sourceTree = "<group>"; };
+		AE1AB98123EE83DC009DA6AE /* URL+Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Router.swift"; sourceTree = "<group>"; };
+		AE1AB98423EE872F009DA6AE /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		AE1AB98623EE88D2009DA6AE /* Provider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
+		AE1AB98823EE8C48009DA6AE /* RequestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestError.swift; sourceTree = "<group>"; };
+		AE1AB98A23EE8F04009DA6AE /* Requester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requester.swift; sourceTree = "<group>"; };
+		AE1AB98C23EE8F81009DA6AE /* RequesterExecutor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequesterExecutor.swift; sourceTree = "<group>"; };
+		AE1AB98E23EE987F009DA6AE /* NetworkingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingService.swift; sourceTree = "<group>"; };
+		AE1AB99323EEFBF3009DA6AE /* CodableHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableHandler.swift; sourceTree = "<group>"; };
+		AE1AB99723EF0463009DA6AE /* QuizService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizService.swift; sourceTree = "<group>"; };
+		AE1AB99923EF04B4009DA6AE /* QuizAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizAPI.swift; sourceTree = "<group>"; };
+		AE1AB99C23EF0752009DA6AE /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		AE90C15423EE317D00956805 /* QuizMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuizMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE90C15723EE317D00956805 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AE90C15923EE317D00956805 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -54,6 +81,7 @@
 		AE90C18523EE3A4300956805 /* QuizViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuizViewController.xib; sourceTree = "<group>"; };
 		AE90C18923EE41A900956805 /* QuizViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewModel.swift; sourceTree = "<group>"; };
 		AE90C18C23EE446400956805 /* QuizCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizCoordinator.swift; sourceTree = "<group>"; };
+		AED5A2A423EF164A0053178B /* StatusValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusValidator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +118,72 @@
 				AE1AB97923EE6D3E009DA6AE /* UITableView+Utils.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		AE1AB97B23EE7849009DA6AE /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				AE1AB98023EE82DE009DA6AE /* Extensions */,
+				AE1AB97C23EE7E02009DA6AE /* Router.swift */,
+				AE1AB97E23EE81EC009DA6AE /* RequestComposer.swift */,
+				AE1AB98623EE88D2009DA6AE /* Provider.swift */,
+				AE1AB98823EE8C48009DA6AE /* RequestError.swift */,
+				AE1AB98A23EE8F04009DA6AE /* Requester.swift */,
+				AE1AB98C23EE8F81009DA6AE /* RequesterExecutor.swift */,
+				AE1AB98E23EE987F009DA6AE /* NetworkingService.swift */,
+				AED5A2A423EF164A0053178B /* StatusValidator.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		AE1AB98023EE82DE009DA6AE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				AE1AB98123EE83DC009DA6AE /* URL+Router.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		AE1AB98323EE867F009DA6AE /* Environment */ = {
+			isa = PBXGroup;
+			children = (
+				AE1AB98423EE872F009DA6AE /* Environment.swift */,
+			);
+			path = Environment;
+			sourceTree = "<group>";
+		};
+		AE1AB99223EEFBDA009DA6AE /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				AE1AB99323EEFBF3009DA6AE /* CodableHandler.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		AE1AB99523EF042B009DA6AE /* Quiz */ = {
+			isa = PBXGroup;
+			children = (
+				AE90C18823EE3F0800956805 /* ViewModel */,
+				AE90C18323EE39FD00956805 /* View */,
+			);
+			path = Quiz;
+			sourceTree = "<group>";
+		};
+		AE1AB99623EF0439009DA6AE /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				AE1AB99723EF0463009DA6AE /* QuizService.swift */,
+				AE1AB99923EF04B4009DA6AE /* QuizAPI.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		AE1AB99B23EF070C009DA6AE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AE1AB99C23EF0752009DA6AE /* Question.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		AE90C14B23EE317D00956805 = {
@@ -135,6 +229,9 @@
 		AE90C17923EE355C00956805 /* Commons */ = {
 			isa = PBXGroup;
 			children = (
+				AE1AB99223EEFBDA009DA6AE /* Utils */,
+				AE1AB98323EE867F009DA6AE /* Environment */,
+				AE1AB97B23EE7849009DA6AE /* Networking */,
 				AE1AB97623EE6C9D009DA6AE /* Extensions */,
 				AE90C17A23EE361B00956805 /* Coordinator */,
 			);
@@ -161,9 +258,10 @@
 		AE90C18223EE39E200956805 /* Quiz */ = {
 			isa = PBXGroup;
 			children = (
+				AE1AB99B23EF070C009DA6AE /* Model */,
+				AE1AB99623EF0439009DA6AE /* Networking */,
 				AE90C18B23EE444800956805 /* Coordinator */,
-				AE90C18823EE3F0800956805 /* ViewModel */,
-				AE90C18323EE39FD00956805 /* View */,
+				AE1AB99523EF042B009DA6AE /* Quiz */,
 			);
 			path = Quiz;
 			sourceTree = "<group>";
@@ -305,15 +403,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE1AB98923EE8C48009DA6AE /* RequestError.swift in Sources */,
+				AE1AB97D23EE7E02009DA6AE /* Router.swift in Sources */,
+				AED5A2A523EF164A0053178B /* StatusValidator.swift in Sources */,
+				AE1AB97F23EE81EC009DA6AE /* RequestComposer.swift in Sources */,
 				AE90C17C23EE363300956805 /* Coordinator.swift in Sources */,
+				AE1AB98523EE872F009DA6AE /* Environment.swift in Sources */,
 				AE1AB97423EE6AE3009DA6AE /* QuizViewCell.swift in Sources */,
 				AE90C18A23EE41A900956805 /* QuizViewModel.swift in Sources */,
 				AE90C17F23EE376100956805 /* AppCoordinator.swift in Sources */,
 				AE90C18623EE3A4300956805 /* QuizViewController.swift in Sources */,
 				AE90C18D23EE446400956805 /* QuizCoordinator.swift in Sources */,
 				AE90C15823EE317D00956805 /* AppDelegate.swift in Sources */,
+				AE1AB99A23EF04B4009DA6AE /* QuizAPI.swift in Sources */,
 				AE1AB97823EE6CC4009DA6AE /* UIView+Utils.swift in Sources */,
 				AE90C15A23EE317D00956805 /* SceneDelegate.swift in Sources */,
+				AE1AB98223EE83DC009DA6AE /* URL+Router.swift in Sources */,
+				AE1AB98723EE88D2009DA6AE /* Provider.swift in Sources */,
+				AE1AB99823EF0463009DA6AE /* QuizService.swift in Sources */,
+				AE1AB99423EEFBF3009DA6AE /* CodableHandler.swift in Sources */,
+				AE1AB99D23EF0752009DA6AE /* Question.swift in Sources */,
+				AE1AB98F23EE987F009DA6AE /* NetworkingService.swift in Sources */,
+				AE1AB98D23EE8F81009DA6AE /* RequesterExecutor.swift in Sources */,
+				AE1AB98B23EE8F04009DA6AE /* Requester.swift in Sources */,
 				AE1AB97A23EE6D3E009DA6AE /* UITableView+Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
