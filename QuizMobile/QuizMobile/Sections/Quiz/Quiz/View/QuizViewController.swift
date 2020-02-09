@@ -178,7 +178,9 @@ class QuizViewController: BaseViewController {
 
 extension QuizViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel?.numberOfHits ?? 0
+        let numberOfRows = viewModel?.numberOfHits ?? 0
+        tableView.separatorStyle = numberOfRows == 0 ? .none : .singleLine
+        return numberOfRows
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
