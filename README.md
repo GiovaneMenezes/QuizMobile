@@ -6,8 +6,8 @@ Quiz App feeded by a HTTP service developed without third-party libraries and wi
 
 ## Screenshots
 
-<img scr="./screenshots/empty.png" alt="drawing" width="200">
-<img scr="./screenshots/filled.png" alt="drawing" width="200">
-<img scr="./screenshots/failure.png" alt="drawing" width="200">
-<img scr="./screenshots/keyboard.png" alt="drawing" width="200">
-<img scr="./screenshots/loading.png" alt="drawing" width="200">
+<img scr="./screenshots/empty.png" alt="drawing" width="200"/>
+<img scr="./screenshots/filled.png" alt="drawing" width="200"/>
+<img scr="./screenshots/failure.png" alt="drawing" width="200"/>
+<img scr="./screenshots/keyboard.png" alt="drawing" width="200"/>
+<img scr="./screenshots/loading.png" alt="drawing" width="200"/>
