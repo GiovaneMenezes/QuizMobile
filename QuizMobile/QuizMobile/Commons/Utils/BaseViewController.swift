@@ -18,11 +18,6 @@ class BaseViewController:  UIViewController {
             self.loadingView = loadingView
             let parentView: UIView = self.navigationController?.view ?? self.view
             parentView.addSubview(loadingView)
-            loadingView.translatesAutoresizingMaskIntoConstraints = false
-            loadingView.topAnchor.constraint(equalTo: parentView.topAnchor).isActive = true
-            loadingView.bottomAnchor.constraint(equalTo: parentView.bottomAnchor).isActive = true
-            loadingView.leadingAnchor.constraint(equalTo: parentView.leadingAnchor).isActive = true
-            loadingView.trailingAnchor.constraint(equalTo: parentView.trailingAnchor).isActive = true
         } else {
             self.loadingView?.removeFromSuperview()
             self.loadingView = nil
