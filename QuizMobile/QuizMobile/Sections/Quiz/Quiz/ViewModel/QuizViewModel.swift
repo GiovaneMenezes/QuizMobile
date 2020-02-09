@@ -68,11 +68,18 @@ class QuizViewModel {
         }
     }
     
+    func checkForVictory() {
+        if numberOfHits == numberOfQuestions {
+            winObservable.value = true
+        }
+    }
+    
     func reset() {
         questionModel = nil
         answers = []
         questionObservable.value = .initialized
         answersObservable.value = true
+        winObservable.value = false
     }
     
     func play() {
@@ -84,6 +91,7 @@ class QuizViewModel {
     func answerTextDidUpdate(string: String) {
         if validateAnswer(answer: string) {
             answers.append(string)
+            checkForVictory()
             answersObservable.value = true
         }
     }

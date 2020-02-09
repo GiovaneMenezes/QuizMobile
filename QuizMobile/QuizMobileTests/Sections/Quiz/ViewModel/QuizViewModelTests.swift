@@ -161,4 +161,33 @@ class QuizViewModelTests: XCTestCase {
         viewModel.fetchQustion()
         waitForExpectations(timeout: TimeLimit.value, handler: nil)
     }
+    
+    func testVictoryValidationSuccess() {
+        viewModel.questionModel = Question(question: "Is this a test?", answer: ["yes", "no", "maybe"])
+        viewModel.answers = viewModel.questionModel!.answer
+        
+        var winObservableUpdate = false
+        
+        viewModel.winObservable.didChange = { isVictory in
+            XCTAssert(isVictory, "should update to victory")
+            winObservableUpdate = true
+        }
+        
+        viewModel.checkForVictory()
+        XCTAssert(winObservableUpdate, "winObservable should be called")
+    }
+    
+    func testVictoryValidationFailure() {
+        viewModel.questionModel = Question(question: "Is this a test?", answer: ["yes", "no", "maybe"])
+        
+        var winObservableUpdate = false
+        
+        viewModel.winObservable.didChange = { isVictory in
+            winObservableUpdate = true
+            XCTFail("should not update winObservable")
+        }
+        
+        viewModel.checkForVictory()
+        XCTAssertFalse(winObservableUpdate, "winObservable should be called")
+    }
 }

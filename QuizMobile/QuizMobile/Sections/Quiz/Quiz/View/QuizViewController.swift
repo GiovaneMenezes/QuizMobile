@@ -122,11 +122,13 @@ class QuizViewController: BaseViewController {
             }
         }
         
-        viewModel?.winObservable.didChange = { [weak self] _ in
+        viewModel?.winObservable.didChange = { [weak self] isVictory in
             guard let self = self else { return }
-            self.displayTryAgainAlert(title: "Congratulations",
-                                      message: "Good job! You found all the answers on time. Keep up with the great work.",
-                                      buttonTitle: "Play Again")
+            if isVictory {
+                self.displayTryAgainAlert(title: "Congratulations",
+                                          message: "Good job! You found all the answers on time. Keep up with the great work.",
+                                          buttonTitle: "Play Again")
+            }
         }
     }
     
