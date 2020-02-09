@@ -13,10 +13,10 @@ class BaseViewController:  UIViewController {
     
     func displayLoading(show: Bool) {
         if show {
-            let cgRect = self.navigationController?.view.bounds ?? self.view.bounds
-            let loadingView = LoadingView(with: cgRect)
-            self.loadingView = loadingView
             let parentView: UIView = self.navigationController?.view ?? self.view
+            let parentBounds = parentView.bounds
+            let loadingView = LoadingView(with: parentBounds)
+            self.loadingView = loadingView
             parentView.addSubview(loadingView)
         } else {
             self.loadingView?.removeFromSuperview()
