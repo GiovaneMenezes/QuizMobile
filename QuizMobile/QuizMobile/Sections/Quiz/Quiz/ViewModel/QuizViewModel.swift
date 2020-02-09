@@ -39,20 +39,28 @@ class QuizViewModel {
     var score: String {
         return String(format: "%02d/%02d", numberOfHits, numberOfQuestions)
     }
+    
     var title: String {
         return questionModel?.question ?? ""
     }
+    
     var numberOfHits: Int {
         return answers.count
     }
+    
     var numberOfQuestions: Int {
         guard let model = questionModel else { return 0 }
         return model.answer.count
     }
     
+    func getNewQuestion() {
+        reset()
+        fetchQustion()
+    }
+    
     func actionButtonDidTap() {
         if playObservable.value {
-            reset()
+            getNewQuestion()
             timer?.stop()
         } else {
             play()
@@ -60,13 +68,18 @@ class QuizViewModel {
         }
     }
     
+    func checkForVictory() {
+        if numberOfHits == numberOfQuestions {
+            winObservable.value = true
+        }
+    }
     
     func reset() {
         questionModel = nil
         answers = []
         questionObservable.value = .initialized
         answersObservable.value = true
-        fetchQustion()
+        winObservable.value = false
     }
     
     func play() {
@@ -76,14 +89,16 @@ class QuizViewModel {
     }
     
     func answerTextDidUpdate(string: String) {
-        if validateAnswer(answer: string) && !answers.contains(string) {
+        if validateAnswer(answer: string) {
             answers.append(string)
+            checkForVictory()
             answersObservable.value = true
         }
     }
     
     func validateAnswer(answer: String) -> Bool {
-        return questionModel?.answer.contains(answer) ?? false
+        guard let questionModel = questionModel else { return false }
+        return questionModel.answer.contains(answer) && !answers.contains(answer)
     }
     
     func timeUpMessage() -> String {

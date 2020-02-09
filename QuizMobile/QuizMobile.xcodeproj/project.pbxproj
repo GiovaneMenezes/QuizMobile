@@ -29,6 +29,10 @@
 		AE80E92E23EFC60900383803 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE80E92D23EFC60900383803 /* LoadingView.swift */; };
 		AE80E93023EFC63000383803 /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE80E92F23EFC63000383803 /* LoadingView.xib */; };
 		AE80E93423EFCBA300383803 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE80E93323EFCBA300383803 /* BaseViewController.swift */; };
+		AE80E93823F089F400383803 /* XCTestCase+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE80E93723F089F400383803 /* XCTestCase+extensions.swift */; };
+		AE80E93B23F0913400383803 /* MockRequestExecutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE80E93A23F0913400383803 /* MockRequestExecutor.swift */; };
+		AE80E94023F0A09100383803 /* quiz_question_success.json in Resources */ = {isa = PBXBuildFile; fileRef = AE80E93F23F0A09100383803 /* quiz_question_success.json */; };
+		AE80E94223F0A11C00383803 /* quiz_question_failure.json in Resources */ = {isa = PBXBuildFile; fileRef = AE80E94123F0A11C00383803 /* quiz_question_failure.json */; };
 		AE90C15823EE317D00956805 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE90C15723EE317D00956805 /* AppDelegate.swift */; };
 		AE90C15A23EE317D00956805 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE90C15923EE317D00956805 /* SceneDelegate.swift */; };
 		AE90C16123EE318100956805 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE90C16023EE318100956805 /* Assets.xcassets */; };
@@ -79,6 +83,10 @@
 		AE80E92D23EFC60900383803 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		AE80E92F23EFC63000383803 /* LoadingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
 		AE80E93323EFCBA300383803 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		AE80E93723F089F400383803 /* XCTestCase+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+extensions.swift"; sourceTree = "<group>"; };
+		AE80E93A23F0913400383803 /* MockRequestExecutor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRequestExecutor.swift; sourceTree = "<group>"; };
+		AE80E93F23F0A09100383803 /* quiz_question_success.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = quiz_question_success.json; sourceTree = "<group>"; };
+		AE80E94123F0A11C00383803 /* quiz_question_failure.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = quiz_question_failure.json; sourceTree = "<group>"; };
 		AE90C15423EE317D00956805 /* QuizMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuizMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE90C15723EE317D00956805 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AE90C15923EE317D00956805 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -211,6 +219,7 @@
 		AE1BC21A23EF833000411BA6 /* Quiz */ = {
 			isa = PBXGroup;
 			children = (
+				AE80E93C23F0A03600383803 /* Networking */,
 				AE1BC21B23EF833E00411BA6 /* ViewModel */,
 			);
 			path = Quiz;
@@ -231,6 +240,40 @@
 				AE80E92F23EFC63000383803 /* LoadingView.xib */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		AE80E93523F0899500383803 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				AE80E93923F0908700383803 /* Executor */,
+				AE80E93623F089BC00383803 /* Extension */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		AE80E93623F089BC00383803 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				AE80E93723F089F400383803 /* XCTestCase+extensions.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		AE80E93923F0908700383803 /* Executor */ = {
+			isa = PBXGroup;
+			children = (
+				AE80E93A23F0913400383803 /* MockRequestExecutor.swift */,
+			);
+			path = Executor;
+			sourceTree = "<group>";
+		};
+		AE80E93C23F0A03600383803 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				AE80E93F23F0A09100383803 /* quiz_question_success.json */,
+				AE80E94123F0A11C00383803 /* quiz_question_failure.json */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 		AE90C14B23EE317D00956805 = {
@@ -267,6 +310,7 @@
 		AE90C16D23EE318100956805 /* QuizMobileTests */ = {
 			isa = PBXGroup;
 			children = (
+				AE80E93523F0899500383803 /* Common */,
 				AEC5EF9E23EF5C07001E1106 /* Sections */,
 				AE90C17023EE318100956805 /* Info.plist */,
 			);
@@ -450,6 +494,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE80E94023F0A09100383803 /* quiz_question_success.json in Resources */,
+				AE80E94223F0A11C00383803 /* quiz_question_failure.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -498,7 +544,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE80E93823F089F400383803 /* XCTestCase+extensions.swift in Sources */,
 				AEC5EFA023EF5C32001E1106 /* QuizViewModelTests.swift in Sources */,
+				AE80E93B23F0913400383803 /* MockRequestExecutor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

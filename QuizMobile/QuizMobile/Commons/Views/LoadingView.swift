@@ -16,7 +16,7 @@ class LoadingView: UIView {
         super.init(frame: frame)
         Bundle.main.loadNibNamed(LoadingView.identifier, owner: self, options: nil)
         addSubview(contentView)
-        contentView.bounds = self.bounds
+        contentView.frame = self.frame
         contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
     }
     

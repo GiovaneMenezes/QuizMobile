@@ -22,7 +22,7 @@ extension RequestError: LocalizedError {
         case .invalidURL:
             return "Invalid URL"
         case .network(let error):
-            return "Network - \(error.localizedDescription)"
+            return error.localizedDescription
         case .invalidResponse:
             return "Unexpected response"
         case .encode(let error):

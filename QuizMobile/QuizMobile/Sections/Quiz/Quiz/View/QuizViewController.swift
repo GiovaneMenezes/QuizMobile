@@ -17,6 +17,7 @@ class QuizViewController: BaseViewController {
     @IBOutlet weak var pointsLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var actionButton: UIButton!
+    @IBOutlet weak var bottomBarStackView: UIStackView!
     
     var viewModel: QuizViewModel?
     
@@ -36,6 +37,19 @@ class QuizViewController: BaseViewController {
         keyboardListener()
         viewModel?.fetchQustion()
         wordTextField.addTarget(nil, action: #selector(textDidChange), for: .editingChanged)
+    }
+    
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+        if UIDevice.current.orientation.isLandscape {
+            bottomBarStackView.axis = .horizontal
+            timeLabel.textAlignment = .center
+            pointsLabel.textAlignment = .center
+        } else {
+            bottomBarStackView.axis = .vertical
+            timeLabel.textAlignment = .right
+            pointsLabel.textAlignment = .left
+        }
     }
     
     func keyboardListener() {
@@ -68,7 +82,10 @@ class QuizViewController: BaseViewController {
                 self.titleLabel.text = self.viewModel?.title
             case .error(let error):
                 self.displayLoading(show: false)
-                print("Error: \(error)")
+                let errorMessage: String = (error as? RequestError)?.localizedDescription ?? error.localizedDescription
+                self.displayTryAgainAlert(title: "Error",
+                                          message: "\(errorMessage)",
+                                          buttonTitle: "Try Again")
             default:
                 break
             }
@@ -105,11 +122,13 @@ class QuizViewController: BaseViewController {
             }
         }
         
-        viewModel?.winObservable.didChange = { [weak self] _ in
+        viewModel?.winObservable.didChange = { [weak self] isVictory in
             guard let self = self else { return }
-            self.displayTryAgainAlert(title: "Congratulations",
-                                      message: "Good job! You found all the answers on time. Keep up with the great work.",
-                                      buttonTitle: "Play Again")
+            if isVictory {
+                self.displayTryAgainAlert(title: "Congratulations",
+                                          message: "Good job! You found all the answers on time. Keep up with the great work.",
+                                          buttonTitle: "Play Again")
+            }
         }
     }
     
@@ -122,7 +141,7 @@ class QuizViewController: BaseViewController {
     func displayTryAgainAlert(title: String, message: String, buttonTitle: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let action = UIAlertAction(title: buttonTitle, style: .default) { [weak self] _ in
-            self?.viewModel?.reset()
+            self?.viewModel?.getNewQuestion()
         }
         alert.addAction(action)
         self.present(alert, animated: true, completion: nil)
